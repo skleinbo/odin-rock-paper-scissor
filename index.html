@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rock-Paper-Scissor</title>
+</head>
+<body>
+    <script>
+        const Moves = ["Rock", "Paper", "Scissor"]
+        let computerScore = 0
+        let playerScore = 0
+        let gamesPlayed = 0
+        const maxGames = 5
+
+        function getComputerMove() {
+            return Math.floor(Math.random() * 3)
+        }
+
+        function getPlayerMove() {
+            let move;
+            while(move===undefined || isNaN(move) || !(1<=move<=3)) {
+                let input = prompt("What's your move; Rock, Paper or Scissor? [1-3]")
+                move =  parseInt(input)
+            }
+            return move - 1
+        }
+
+        function game(games) {
+            for(let ngame = 0; ngame<games; ngame++) {
+                let playerMove = getPlayerMove() // between 0-2
+                let computerMove = getComputerMove()
+
+                let msg = "You move " + Moves[playerMove] + " against " + Moves[computerMove] +"."
+                
+                let winner = computerMove - playerMove // -2..+2
+                
+                if(winner == 1 || winner == -2) {
+                    computerScore += 1
+                    msg += " Computer wins."
+                }
+                else if(winner == 2 || winner == -1) {
+                    playerScore += 1
+                    msg += " You win."
+                }
+                else {
+                    msg += " Draw."
+                }
+                console.log(msg)
+            }
+            if(playerScore>computerScore)
+                console.log("You win the match.")
+            else if(computerScore > playerScore)
+                console.log("The computer wins the match.")
+            else {
+                console.log("It's a draw.")
+            }
+        } 
+
+        game(maxGames)
+    </script>
+
+
+</body>
+</html>
