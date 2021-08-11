@@ -1,0 +1,28 @@
+{
+  "name": "odin-rock-paper-scissor",
+  "version": "0.2.0",
+  "description": "Play Rock-Paper-Scissor against the computer in your browser.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skleinbo/odin-rock-paper-scissor.git"
+  },
+  "keywords": [
+    "game",
+    "learning"
+  ],
+  "author": "Stephan Kleinbölting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skleinbo/odin-rock-paper-scissor/issues"
+  },
+  "homepage": "https://github.com/skleinbo/odin-rock-paper-scissor#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0"
+  }
+}
